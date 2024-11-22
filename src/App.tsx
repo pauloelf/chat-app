@@ -1,3 +1,4 @@
+import '@radix-ui/themes/styles.css'
 import { useAuthState } from "react-firebase-hooks/auth"
 import { SignIn } from "./components/sign-in"
 import { auth } from "./services/firebase-config"
