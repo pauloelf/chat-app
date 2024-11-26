@@ -1,7 +1,7 @@
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
 import { Flex, Text, TextField } from "@radix-ui/themes";
 import { NavBarDropdown } from "./navbar-dropdown";
-import { NavBarSegmentControl } from "./navbar-segment-control";
+import { NavBarSegmentedControl } from "./navbar-segmented-control";
 
 export function NavBar() {
   return (
@@ -31,7 +31,7 @@ export function NavBar() {
 	      </TextField.Slot>
       </TextField.Root>
 
-      <NavBarSegmentControl />
+      <NavBarSegmentedControl />
     </header>
   )
 }

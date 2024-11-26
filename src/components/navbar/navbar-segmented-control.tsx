@@ -1,9 +1,14 @@
 import { SegmentedControl } from "@radix-ui/themes";
+import { SegmentedControlContext } from "../../contexts/segmented-control-context";
+import { useContext } from "react";
+import { SegmentType } from "../../@types/segmented-control-type";
 
-export function NavBarSegmentControl() {
+export function NavBarSegmentedControl() {
+  const { segment, setSegment } = useContext(SegmentedControlContext)
   return (
     <SegmentedControl.Root 
-      defaultValue="chats"
+      defaultValue={segment}
+      onValueChange={(value: SegmentType) => setSegment(value)}
       radius="full"
       style={{color: 'var(--accent-12)'}}
       mx={{initial: '4', sm: '6', xl: '8'}}
