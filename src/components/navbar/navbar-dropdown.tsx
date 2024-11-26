@@ -1,11 +1,12 @@
 import { PersonIcon, DotsVerticalIcon, MoonIcon, SunIcon, GearIcon } from "@radix-ui/react-icons";
 import { DropdownMenu, Flex, IconButton, Select } from "@radix-ui/themes";
 import { NavBarDialogAlert } from "./navbar-dialog-alert";
-import { ThemeType } from "../../@types/navbar-type";
-import { useState } from "react";
+import { ThemeType } from "../../@types/theme-type";
+import { useContext } from "react";
+import { ThemeContext } from "../../contexts/theme-context";
 
 export function NavBarDropdown () {
-  const [theme, setTheme] = useState<ThemeType>('light')
+  const {theme, setTheme} = useContext(ThemeContext)
   const data = {
     light: { label: "Claro", icon: <SunIcon /> },
     dark: { label: "Escuro", icon: <MoonIcon /> },
