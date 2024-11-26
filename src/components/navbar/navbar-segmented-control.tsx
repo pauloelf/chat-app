@@ -1,6 +1,6 @@
 import { SegmentedControl } from "@radix-ui/themes";
 
-export function NavBarSegmentControl() {
+export function NavBarSegmentedControl() {
   return (
     <SegmentedControl.Root 
       defaultValue="chats"
